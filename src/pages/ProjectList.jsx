@@ -10,7 +10,7 @@ const ProjectList = () => {
   if (error) return <div className="">Something went wrong.</div>;
 
   return (
-    <div className="">
+    <div className="p-6">
       <h1 className="text-4xl font-semibold mb-6">Get inspired.</h1>
       <p className="text-lg mb-6 md:text-xl">Find Inspiration and Motivation to Pursue Your Own Creative Endeavors</p>
       {data.projects.map((project) => (
