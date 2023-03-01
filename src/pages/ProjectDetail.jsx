@@ -1,8 +1,10 @@
 import React from "react";
+import { useParams } from "react-router";
 import { useProjectDetail } from "../hooks/useProjectDetail";
 
 const ProjectDetail = () => {
-  const { data, error, loading } = useProjectDetail();
+  const { id } = useParams();
+  const { data, error, loading } = useProjectDetail(id);
 
   if (loading) return <div className="">loading...</div>;
   if (error) return <div className="">Something went wrong.</div>;
@@ -20,7 +22,7 @@ const ProjectDetail = () => {
         </article>
 
         <div className="flex flex-1 justify-center">
-          <img className="w-3/5 object-cover md:w-4/5 lg:w-80" src={data.project.card.image.url} alt="" />
+          <img className="w-3/5 object-cover md:w-4/5 lg:w-80" src={data.project.card.image?.url} alt="" />
         </div>
       </div>
 
@@ -28,21 +30,21 @@ const ProjectDetail = () => {
       <div className="px-6 mb-10 md:px-20 md:py-20">
         <h1 className="text-4xl md:text-5xl mb-6 ">{data.project.idea.title}</h1>
         <p className="text-lg mb-10 lg:mb-20">{data.project.idea.description}</p>
-        <img src={data.project.idea.image.url} alt="" className="rounded-2xl" />
+        <img src={data.project.idea.image?.url} alt="" className="rounded-2xl" />
       </div>
 
       {/* Design */}
       <div className="px-6 mb-10 md:px-20 md:pb-20">
         <h1 className="text-4xl md:text-5xl mb-6">{data.project.design.title}</h1>
         <p className="text-lg mb-6">{data.project.design.description}</p>
-        <img src={data.project.design.image.url} alt="" className="rounded-2xl" />
+        <img src={data.project.design.image?.url} alt="" className="rounded-2xl" />
       </div>
 
       {/* Development */}
       <div className="px-6 mb-10 md:px-20 md:pb-20">
         <h1 className="text-4xl md:text-5xl mb-6">{data.project.development.title}</h1>
         <p className="text-lg mb-6">{data.project.development.description}</p>
-        <img src={data.project.development.image.url} alt="" className="rounded-2xl" />
+        <img src={data.project.development.image?.url} alt="" className="rounded-2xl" />
       </div>
     </>
   );

@@ -1,8 +1,8 @@
 import { useQuery, gql } from "@apollo/client";
 
 const GET_DATA = gql`
-  query {
-    project(where: { id: "clena8qgs089p0bw320ykuiar" }) {
+  query GetProject($id: ID!) {
+    project(where: { id: $id }) {
       card {
         id
         name
@@ -64,8 +64,12 @@ const GET_DATA = gql`
   }
 `;
 
-export const useProjectDetail = () => {
-  const { data, error, loading } = useQuery(GET_DATA);
+export const useProjectDetail = (id) => {
+  const { data, error, loading } = useQuery(GET_DATA, {
+    variables: {
+      id,
+    },
+  });
 
   return {
     data,
