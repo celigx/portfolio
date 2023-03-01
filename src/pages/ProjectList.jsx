@@ -2,12 +2,13 @@ import React from "react";
 import "../App.css";
 import ProjectCard from "../components/ProjectCard";
 import { useProjects } from "../hooks/useProjects";
+import Loading from "./Loading";
 
 const ProjectList = () => {
   const { data, error, loading } = useProjects();
 
-  if (loading) return <div className="">loading...</div>;
-  if (error) return <div className="">Something went wrong.</div>;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
   return (
     <div className="p-6">

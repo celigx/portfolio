@@ -1,13 +1,15 @@
 import React from "react";
 import { useParams } from "react-router";
 import { useProjectDetail } from "../hooks/useProjectDetail";
+import Error from "./Error";
+import Loading from "./Loading";
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const { data, error, loading } = useProjectDetail(id);
 
-  if (loading) return <div className="">loading...</div>;
-  if (error) return <div className="">Something went wrong.</div>;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
   console.log(data);
 
