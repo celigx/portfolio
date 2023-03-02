@@ -60,6 +60,18 @@ const GET_DATA = gql`
           hex
         }
       }
+      link {
+        id
+        title
+        website
+        github
+        githubIcon {
+          url
+        }
+        websiteIcon {
+          url
+        }
+      }
     }
   }
 `;
