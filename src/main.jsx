@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ProjectList from "./pages/ProjectList";
 import Root from "./routes/root";
 import ProjectDetail from "./pages/ProjectDetail";
+import Projects from "./pages/Projects";
 
 const client = new ApolloClient({
   uri: `https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/${import.meta.env.VITE_CONTENT_API}/master`,
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <ProjectList />,
+      },
+      {
+        path: "/projects",
+        element: <Projects />,
       },
       {
         path: "/:id",

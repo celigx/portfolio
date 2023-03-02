@@ -21,8 +21,7 @@ const ProjectList = () => {
 
   return (
     <div className="p-6">
-      <h1 className="text-4xl font-semibold mb-6">Get inspired.</h1>
-      <p className="text-lg mb-6 md:text-xl">Find Inspiration and Motivation to Pursue Your Own Creative Endeavors</p>
+      <h1 className="text-4xl font-semibold mb-6">Our work</h1>
       {data.projects.slice(0, show).map((project) => (
         <ProjectCard key={project.id} project={project} />
       ))}
