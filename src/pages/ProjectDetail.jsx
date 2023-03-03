@@ -17,8 +17,8 @@ const ProjectDetail = () => {
     <>
       {/* Hero */}
       <div
-        className="text-white p-6 mb-6 md:flex md:items-center md:mb-0 lg:h-screen md:px-20 md:py-20"
-        style={{ background: data.project.card.backColor.hex }}
+        className="p-6 mb-6 md:flex md:items-center md:mb-0 lg:h-screen md:px-20 md:py-20"
+        style={{ background: data.project.card.backColor.hex, color: data.project.card.textColor.hex }}
       >
         <article className="flex flex-col flex-1 mb-6 md:mr-6 md:mb-0">
           <h2 className="text-lg uppercase mb-3 md:text-xl">{data.project.card.name}</h2>
