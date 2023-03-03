@@ -20,7 +20,7 @@ const ProjectList = () => {
   };
 
   return (
-    <div className="p-6">
+    <div className="p-6 md:px-20 lg:max-w-screen-xl lg:mx-auto">
       <h1 className="text-4xl font-semibold mb-6">Our work</h1>
       {data.projects.slice(0, show).map((project) => (
         <ProjectCard key={project.id} project={project} />
