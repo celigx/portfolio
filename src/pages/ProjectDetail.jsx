@@ -34,7 +34,7 @@ const ProjectDetail = () => {
       {/* Idea */}
       <div className="px-6 mb-10 md:px-20 md:py-20">
         <h1 className="text-4xl md:text-5xl mb-6 ">{data.project.idea.title}</h1>
-        <p className="text-lg mb-10 lg:mb-20">{data.project.idea.description}</p>
+        <p className="text-lg mb-6">{data.project.idea.description}</p>
         <img src={data.project.idea.image?.url} alt="" className="rounded-2xl" />
       </div>
 
