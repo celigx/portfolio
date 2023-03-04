@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <div className="flex items-center h-16 px-6 md:px-20 lg:max-w-screen-xl lg:mx-auto">
+    <nav className="flex items-center h-16 px-6 md:px-20 lg:max-w-screen-xl lg:mx-auto">
       <ul className="flex">
         <li className="mr-10">
           <Link to={"/portfolio"} className="text-md hover:text-gray-500 duration-150">
@@ -16,7 +16,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
 
