@@ -7,7 +7,7 @@ import ProjectList from "./pages/ProjectList";
 import Root from "./routes/root";
 import ProjectDetail from "./pages/ProjectDetail";
 import Projects from "./pages/Projects";
-import Error from "./pages/Error";
+import NotFound from "./pages/NotFound";
 
 const client = new ApolloClient({
   uri: `https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/${import.meta.env.VITE_CONTENT_API}/master`,
@@ -33,7 +33,7 @@ const router = createBrowserRouter([
       },
       {
         path: "*",
-        element: <Error />,
+        element: <NotFound />,
       },
     ],
   },

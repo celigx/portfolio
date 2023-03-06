@@ -3,15 +3,15 @@ import { useParams } from "react-router";
 import Link from "../components/Link";
 import Links from "../components/Links";
 import { useProjectDetail } from "../hooks/useProjectDetail";
-import Error from "./Error";
 import Loading from "./Loading";
+import NotFound from "./NotFound";
 
 const ProjectDetail = () => {
   const { id } = useParams();
   const { data, error, loading } = useProjectDetail(id);
 
   if (loading) return <Loading />;
-  if (error) return <Error />;
+  if (error) return <NotFound />;
 
   return (
     <>

@@ -1,14 +1,14 @@
 import React from "react";
 import ProjectCard from "../components/ProjectCard";
 import { useProjects } from "../hooks/useProjects";
-import Error from "./Error";
 import Loading from "./Loading";
+import NotFound from "./NotFound";
 
 const Projects = () => {
   const { data, error, loading } = useProjects();
 
   if (loading) return <Loading />;
-  if (error) return <Error />;
+  if (error) return <NotFound />;
 
   return (
     <div className="p-6 md:px-20 lg:max-w-screen-xl lg:mx-auto">
