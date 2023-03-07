@@ -4,7 +4,7 @@ import "../App.css";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Link to={`/portfolio/projects/${project.id}`}>
+    <Link to={`/projects/${project.id}`}>
       <div
         className="rounded-xl p-6 mb-6 overflow-clip md:flex md:p-12"
         style={{ background: project.card.backColor.hex, color: project.card.textColor.hex, minHeight: "25rem" }}

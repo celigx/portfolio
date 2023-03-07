@@ -23,7 +23,7 @@ const ProjectList = () => {
       ))}
       <div className="flex items-center justify-center">
         <Link
-          to={"/portfolio/projects"}
+          to={"/projects"}
           className="bg-gray-200 hover:bg-gray-400 duration-150 text-gray-500 hover:text-white font-bold uppercase tracking-widest rounded-3xl px-20 py-3"
         >
           Show all
