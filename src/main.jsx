@@ -10,7 +10,7 @@ import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 
 const client = new ApolloClient({
-  uri: `https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/${import.meta.env.VITE_CONTENT_API}/master`,
+  uri: "https://eu-central-1-shared-euc1-02.cdn.hygraph.com/content/clek4lopw0yjh01uo18csbig4/master",
   cache: new InMemoryCache(),
 });
 
