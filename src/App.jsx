@@ -5,16 +5,19 @@ import Navbar from "./components/Navbar";
 import ProjectDetail from "./pages/ProjectDetail";
 import Projects from "./pages/Projects";
 import ProjectList from "./pages/ProjectList";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route index element={<ProjectList />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/projects/:id" element={<ProjectDetail />} />
-      </Routes>
+      <ScrollToTop>
+        <Routes>
+          <Route index element={<ProjectList />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetail />} />
+        </Routes>
+      </ScrollToTop>
       <Footer />
     </>
   );
