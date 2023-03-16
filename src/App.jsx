@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import ProjectDetail from "./pages/ProjectDetail";
 import Projects from "./pages/Projects";
-import ProjectList from "./pages/ProjectList";
+import Home from "./pages/Home";
 import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Navbar />
       <ScrollToTop>
         <Routes>
-          <Route index element={<ProjectList />} />
+          <Route index element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/projects/:id" element={<ProjectDetail />} />
         </Routes>
