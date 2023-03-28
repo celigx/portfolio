@@ -13,7 +13,7 @@ const Home = () => {
   if (error) return <NotFound />;
 
   // Show the number of project cards
-  const CARD_NUMBER = 3;
+  const CARD_NUMBER = 4;
 
   return (
     <>
@@ -36,17 +36,16 @@ const Home = () => {
         </div>
       </div>
       <div className="p-6 max-w-screen-2xl mx-auto xl:p-0">
-        <h1 className="text-4xl font-semibold mb-6">My work.</h1>
-        {data.projects.slice(0, CARD_NUMBER).map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
-        <div className="flex items-center justify-center">
-          <Link
-            to={"/projects"}
-            className="bg-gray-200 hover:bg-gray-400 duration-150 text-gray-500 hover:text-white font-bold uppercase tracking-widest rounded-3xl px-20 py-3"
-          >
-            Show all
+        <div className="flex items-center justify-between">
+          <h1 className="text-4xl font-semibold mb-6">My work</h1>
+          <Link to={"/projects"} className="text-2xl font-semibold underline hover:text-gray-600 mb-6">
+            See all
           </Link>
+        </div>
+        <div className="grid grid-cols-1 xl:grid-cols-2 gap-x-5">
+          {data.projects.slice(0, CARD_NUMBER).map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
         </div>
       </div>
     </>

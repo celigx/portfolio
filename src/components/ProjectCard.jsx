@@ -6,7 +6,7 @@ const ProjectCard = ({ project }) => {
   return (
     <Link to={`/projects/${project.id}`}>
       <div
-        className="rounded-xl p-6 mb-6 overflow-clip md:flex md:p-12"
+        className="h-120 rounded-xl p-6 mb-6 overflow-clip md:flex md:p-12"
         style={{ background: project.card.backColor.hex, color: project.card.textColor.hex, minHeight: "25rem" }}
       >
         <article className="flex flex-col flex-1 mb-3 md:mr-6 md:mb-0">
