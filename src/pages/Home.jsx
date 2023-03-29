@@ -35,7 +35,7 @@ const Home = () => {
           </figure>
         </div>
       </div>
-      <div className="p-6 max-w-screen-2xl mx-auto xl:p-0">
+      <div className="p-6 max-w-screen-2xl xl:mx-auto 2xl:p-0">
         <div className="flex items-center justify-between">
           <h1 className="text-4xl font-semibold mb-6">My work</h1>
           <Link to={"/projects"} className="text-2xl font-semibold underline hover:text-gray-600 mb-6">
