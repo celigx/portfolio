@@ -30,7 +30,7 @@ const Home = () => {
           </div>
           <figure className="flex flex-1 items-center justify-center">
             <picture>
-              <img src="src/assets/iphone-14-pro.png" alt="" className="w-full" />
+              <img src="/iphone-14-pro.png" alt="" className="w-full" />
             </picture>
           </figure>
         </div>
