@@ -24,9 +24,9 @@ const Home = () => {
             <h1 className="text-7xl md:text-9xl">Design.</h1>
             <h1 className="text-7xl font-medium mb-6 md:text-9xl">Create.</h1>
             <p className="text-xl mb-6 md:text-2xl">To turn an idea into reality, one must first code, design, and create.</p>
-            <button className="bg-slate-900 hover:bg-slate-700 duration-150 text-white rounded-full px-6 py-3 md:text-xl md:px-12 md:py-4">
+            <Link to={"/projects"} className="bg-slate-900 hover:bg-slate-700 duration-150 text-white rounded-full px-6 py-3 md:text-xl md:px-12 md:py-4">
               Explore projects
-            </button>
+            </Link>
           </div>
           <figure className="flex flex-1 items-center justify-center">
             <picture>
