@@ -2,8 +2,8 @@ import React from "react";
 
 const Links = ({ data }) => {
   return (
-    <div className="px-6 mb-10 md:px-20 md:pb-20 lg:max-w-screen-xl lg:mx-auto">
-      <h1 className="text-4xl mb-6">{data.project.link.title}</h1>
+    <div className="px-6 mb-6 md:px-20 md:pb-20 lg:max-w-screen-xl lg:mx-auto">
+      <h1 className="text-4xl md:text-6xl mb-6">{data.project.link.title}</h1>
       <div className="flex flex-col md:flex-row">
         <a
           href={data.project.link?.website}
